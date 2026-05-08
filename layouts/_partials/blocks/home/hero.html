@@ -1,0 +1,189 @@
+<section id="hero" class="hero relative overflow-hidden py-16 xl:py-24">
+  <div class="pointer-events-none absolute inset-0 -z-20 bg-gradient-to-b from-slate-50 via-white to-white"></div>
+  <div class="tech-bg-cloud pointer-events-none absolute inset-0 -z-10 hidden xl:block" aria-hidden="true">
+    <span class="tech-bg-badge tech-float-slow left-[3%] top-[14%]">
+      <i class="fa-solid fa-database"></i><span>PostgreSQL</span>
+    </span>
+    <span class="tech-bg-badge tech-float-mid left-[6%] top-[27%]">
+      <i class="fa-solid fa-stream"></i><span>Kafka</span>
+    </span>
+    <span class="tech-bg-badge tech-float-fast left-[4%] top-[43%]">
+      <i class="fa-solid fa-memory"></i><span>Redis</span>
+    </span>
+    <span class="tech-bg-badge tech-float-mid right-[4%] top-[14%]">
+      <i class="fa-solid fa-code"></i><span>DBeaver</span>
+    </span>
+    <span class="tech-bg-badge tech-float-slow right-[3%] top-[27%]">
+      <i class="fa-brands fa-confluence"></i><span>Confluence</span>
+    </span>
+    <span class="tech-bg-badge tech-float-fast right-[5%] top-[43%]">
+      <i class="fa-brands fa-jira"></i><span>Jira</span>
+    </span>
+    <span class="tech-bg-badge tech-float-mid left-[14%] top-[7%]">
+      <i class="fa-solid fa-draw-polygon"></i><span>PlantUML</span>
+    </span>
+    <span class="tech-bg-badge tech-float-fast right-[14%] top-[7%]">
+      <i class="fa-solid fa-paper-plane"></i><span>Postman</span>
+    </span>
+    <span class="tech-bg-badge tech-float-slow left-[12%] top-[72%]">
+      <i class="fa-solid fa-file-waveform"></i><span>Swagger</span>
+    </span>
+    <span class="tech-bg-badge tech-float-mid right-[12%] top-[72%]">
+      <i class="fa-solid fa-network-wired"></i><span>RabbitMQ</span>
+    </span>
+    <span class="tech-bg-badge tech-float-slow left-[15%] top-[18%]">
+      <i class="fa-solid fa-file-contract"></i><span>BRD / SRS</span>
+    </span>
+    <span class="tech-bg-badge tech-float-fast left-[16%] top-[34%]">
+      <i class="fa-solid fa-list-check"></i><span>User Story</span>
+    </span>
+    <span class="tech-bg-badge tech-float-mid left-[15%] top-[50%]">
+      <i class="fa-solid fa-people-arrows-left-right"></i><span>Use Case</span>
+    </span>
+    <span class="tech-bg-badge tech-float-slow left-[15%] top-[62%]">
+      <i class="fa-solid fa-diagram-successor"></i><span>BPMN</span>
+    </span>
+    <span class="tech-bg-badge tech-float-fast right-[16%] top-[20%]">
+      <i class="fa-solid fa-bezier-curve"></i><span>UML</span>
+    </span>
+    <span class="tech-bg-badge tech-float-mid right-[16%] top-[35%]">
+      <i class="fa-solid fa-shuffle"></i><span>Data Mapping</span>
+    </span>
+    <span class="tech-bg-badge tech-float-slow right-[15%] top-[50%]">
+      <i class="fa-solid fa-shield-halved"></i><span>Security</span>
+    </span>
+    <span class="tech-bg-badge tech-float-fast right-[15%] top-[63%]">
+      <i class="fa-solid fa-server"></i><span>Microservices</span>
+    </span>
+    <span class="tech-bg-badge tech-float-mid left-[24%] top-[10%]">
+      <i class="fa-solid fa-cubes"></i><span>C4 Model</span>
+    </span>
+    <span class="tech-bg-badge tech-float-fast left-[24%] top-[76%]">
+      <i class="fa-solid fa-bug"></i><span>API Testing</span>
+    </span>
+    <span class="tech-bg-badge tech-float-slow right-[24%] top-[76%]">
+      <i class="fa-solid fa-book-open-reader"></i><span>Docs</span>
+    </span>
+    <span class="tech-bg-badge tech-float-mid right-[24%] top-[10%]">
+      <i class="fa-solid fa-wave-square"></i><span>NFR</span>
+    </span>
+  </div>
+  <div
+    class="bg-noise-soft pointer-events-none absolute inset-0 -z-10 opacity-[0.65]"
+    aria-hidden="true"
+  ></div>
+  <div
+    class="pointer-events-none absolute -right-24 top-0 -z-10 h-[28rem] w-[28rem] rounded-full bg-gradient-to-br from-primary/15 via-accent/10 to-transparent blur-3xl xl:right-0"
+    aria-hidden="true"
+  ></div>
+  <div
+    class="pointer-events-none absolute -left-32 bottom-0 -z-10 h-72 w-72 rounded-full bg-gradient-to-tr from-accent/15 to-primary/5 blur-3xl"
+    aria-hidden="true"
+  ></div>
+  <div class="text-primary/12 absolute right-0 top-1/2 -z-10 hidden translate-x-[80%] -translate-y-1/2 xl:block">
+    {{ partial "utilities/svg" (dict "src" "images/hero/bg-blob-1.svg") }}
+  </div>
+  <div class="text-accent/15 absolute bottom-0 left-0 -z-10 hidden -translate-x-[80%] xl:block">
+    {{ partial "utilities/svg" (dict "src" "images/hero/bg-blob-2.svg") }}
+  </div>
+
+  <div class="container relative mx-auto max-w-6xl px-4">
+    <div class="mb-16 grid gap-12 xl:grid-cols-2 xl:items-center xl:gap-16">
+      <div class="flex flex-col justify-center gap-6">
+        <p class="section-eyebrow xl:text-start" data-hero-intro>Системный анализ · менторство</p>
+        {{ with .title }}
+          <h1
+            class="markdown-title text-center text-4xl font-bold leading-[1.15] tracking-tight text-slate-900 sm:text-5xl xl:text-start xl:text-[2.75rem] xl:leading-[1.12]"
+            data-hero-intro
+          >
+            {{ . | markdownify }}
+          </h1>
+        {{ end }}
+        {{ with .text }}
+          <p
+            class="mx-auto max-w-xl text-center text-lg leading-relaxed text-slate-600 sm:text-xl sm:leading-relaxed xl:mx-0 xl:max-w-lg xl:text-start"
+            data-hero-intro
+          >
+            {{ . }}
+          </p>
+        {{ end }}
+        {{ if .buttons }}
+          <div
+            class="mt-2 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:justify-center xl:justify-start"
+            data-hero-intro
+          >
+            {{ range .buttons }}
+              {{ if .primary }}
+                {{ partial "components/button/primary" (dict "label" .label "href" .link) }}
+              {{ else }}
+                {{ partial "components/button/outline" (dict "label" .label "href" .link) }}
+              {{ end }}
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+
+      <div class="relative flex flex-col justify-center">
+        <div
+          class="pointer-events-none absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br from-primary/10 via-transparent to-accent/10 blur-2xl"
+          aria-hidden="true"
+        ></div>
+        {{ with .flow }}
+          {{ $steps := .steps }}
+          <div
+            class="hero-float-card relative mx-auto w-full max-w-xl rounded-3xl border border-slate-200/80 bg-white/90 p-5 shadow-xl shadow-slate-900/[0.08] ring-1 ring-slate-900/[0.04] backdrop-blur-sm sm:p-7"
+            data-hero-intro
+          >
+            <div
+              class="absolute left-4 top-0 h-1 w-16 rounded-full bg-gradient-to-r from-primary to-accent sm:left-6"
+              aria-hidden="true"
+            ></div>
+            {{ with .title }}
+              <p class="mb-6 mt-2 text-center text-xs font-bold uppercase tracking-[0.18em] text-slate-500">{{ . }}</p>
+            {{ end }}
+            <ol class="relative flex flex-col gap-1.5">
+              {{ range $i, $step := $steps }}
+                <li class="relative flex items-start gap-3 sm:gap-4">
+                  <span
+                    class="relative z-10 mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary/80 text-[0.7rem] font-bold text-white shadow-md shadow-primary/25 ring-4 ring-white sm:size-9 sm:text-xs"
+                    >{{ add $i 1 }}</span
+                  >
+                  <div
+                    class="min-w-0 flex-1 rounded-2xl border border-slate-100 bg-slate-50/90 px-3.5 py-2.5 text-[0.82rem] font-semibold leading-snug text-slate-800 shadow-sm sm:px-4 sm:py-3 sm:text-[0.86rem]"
+                  >
+                    {{ $step }}
+                  </div>
+                </li>
+              {{ end }}
+            </ol>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+
+    {{ if .items }}
+      <div class="grid gap-4 sm:grid-cols-2 sm:gap-5 xl:grid-cols-4">
+        {{ range .items }}
+          {{ $tint := .color | default site.Params.colors.primary }}
+          <div
+            class="card-elevated card-elevated-hover group relative flex items-start gap-4 overflow-hidden border-t-[3px] p-5 sm:p-6"
+            style="border-top-color: color-mix(in srgb, {{ $tint }} 42%, transparent)"
+          >
+            <div
+              class="flex size-12 shrink-0 items-center justify-center rounded-xl text-lg transition-transform duration-300 group-hover:scale-105"
+              style="background: linear-gradient(to bottom right, color-mix(in srgb, {{ $tint }} 16%, transparent), color-mix(in srgb, {{ $tint }} 9%, transparent)); color: {{ $tint }}"
+            >
+              <i class="{{ .icon }}" aria-hidden="true"></i>
+            </div>
+            <div class="min-w-0">
+              <h2 class="text-base font-bold text-slate-900">{{ .title }}</h2>
+              {{ with .text }}
+                <p class="mt-1 text-sm leading-relaxed text-slate-600">{{ . }}</p>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</section>

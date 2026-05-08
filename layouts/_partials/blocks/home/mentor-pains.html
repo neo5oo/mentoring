@@ -1,0 +1,42 @@
+<section id="{{ .id }}" class="scroll-mt-24 relative bg-gradient-to-b from-indigo-50/40 via-slate-50/80 to-white py-20 xl:py-28">
+  <div class="container mx-auto max-w-6xl px-4">
+    <div class="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
+      <div class="text-center lg:sticky lg:top-28 lg:text-start">
+        <p class="section-eyebrow lg:text-start">Диагностика</p>
+        <h2 class="section-title lg:text-start">{{ .title }}</h2>
+        <div class="mx-auto mt-6 h-1 w-16 rounded-full bg-gradient-to-r from-primary to-accent lg:mx-0"></div>
+        {{ with .cta }}
+          <div class="mt-10 hidden justify-center lg:flex lg:justify-start">
+            {{ partial "components/button/primary" (dict "label" .label "href" .url) }}
+          </div>
+        {{ end }}
+      </div>
+      <div class="relative">
+        <div
+          class="pointer-events-none absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-primary/10 via-white to-accent/10 opacity-90 blur-xl"
+          aria-hidden="true"
+        ></div>
+        <ul
+          class="card-elevated relative space-y-4 border-primary/10 bg-white/95 p-6 shadow-xl shadow-slate-900/[0.06] ring-1 ring-primary/10 sm:p-8"
+        >
+          {{ range .items }}
+            <li class="flex gap-4 text-slate-700">
+              <span
+                class="mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs text-primary"
+                aria-hidden="true"
+              >
+                <i class="fa-solid fa-check"></i>
+              </span>
+              <span class="text-[0.95rem] leading-relaxed">{{ . }}</span>
+            </li>
+          {{ end }}
+        </ul>
+        {{ with .cta }}
+          <div class="mt-10 flex justify-center lg:hidden">
+            {{ partial "components/button/primary" (dict "label" .label "href" .url) }}
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

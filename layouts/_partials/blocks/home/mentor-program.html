@@ -1,0 +1,50 @@
+<section id="{{ .id }}" class="scroll-mt-24 relative border-b border-slate-200/70 bg-gradient-to-b from-white to-slate-50/55 py-20 xl:py-28">
+  {{ partial "components/tech-cloud-section" (dict "set" "program") }}
+  <div class="container mx-auto max-w-5xl px-4">
+    <p class="section-eyebrow">Маршрут</p>
+    <h2 class="section-title mx-auto text-center">{{ .title }}</h2>
+    {{ with .subtitle }}
+      <p class="section-subtitle mx-auto text-center">{{ . }}</p>
+    {{ end }}
+    <div class="section-shell mx-auto mt-14 max-w-4xl">
+      <div class="space-y-4">
+      {{ range $i, $track := .tracks }}
+        <details
+          class="details-smooth group rounded-2xl border border-slate-200/90 bg-slate-50/50 shadow-md shadow-slate-900/[0.04] transition-all duration-300 open:border-primary/30 open:bg-white open:shadow-lg open:shadow-primary/8 open:ring-1 open:ring-primary/20"
+          {{ if eq $i 0 }}open{{ end }}
+        >
+          <summary
+            class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-5 marker:content-none transition-all duration-300 hover:bg-white/90 sm:px-6 sm:py-5 [&::-webkit-details-marker]:hidden"
+          >
+            <span class="flex items-center gap-4">
+              <span
+                class="flex size-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary/15 to-accent/10 text-sm font-bold text-primary"
+                >{{ add $i 1 }}</span
+              >
+              <span class="text-left text-base font-bold text-slate-900 sm:text-lg">{{ $track.title }}</span>
+            </span>
+            <span
+              class="flex size-9 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white text-primary transition-all duration-300 group-open:rotate-180 group-open:border-primary/25 group-open:bg-primary/5"
+              aria-hidden="true"
+            >
+              <i class="fa-solid fa-chevron-down text-sm"></i>
+            </span>
+          </summary>
+          <div class="details-content">
+            <div class="details-content-inner border-t border-slate-100 px-5 pb-6 pt-2 sm:px-6">
+              <ul class="mt-2 grid gap-2.5 sm:grid-cols-1">
+                {{ range $track.items }}
+                  <li class="flex gap-3 text-[0.95rem] text-slate-600">
+                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-gradient-to-br from-primary to-accent" aria-hidden="true"></span>
+                    <span class="leading-relaxed">{{ . }}</span>
+                  </li>
+                {{ end }}
+              </ul>
+            </div>
+          </div>
+        </details>
+      {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

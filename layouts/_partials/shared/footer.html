@@ -1,0 +1,50 @@
+{{ with hugo.Data.shared.subscribe }}{{ if .enable }}{{ partial "blocks/shared/subscribe" . }}{{ end }}{{ end }}
+
+<footer class="relative border-t border-slate-200/80 bg-gradient-to-b from-slate-50/60 to-white pb-12 pt-16">
+  <div
+    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"
+    aria-hidden="true"
+  ></div>
+  <div class="container mx-auto max-w-6xl px-4">
+    <div class="section-shell flex flex-col gap-14 xl:flex-row xl:items-start xl:justify-between">
+      <div class="max-w-md text-center xl:text-start">
+        <p class="text-xl font-bold tracking-tight text-slate-900">Данил | Ментор по системному анализу</p>
+        <p class="mt-4 text-[0.95rem] leading-relaxed text-slate-600">{{ site.Params.description }}</p>
+        {{ range site.Menus.footer }}
+          {{ if eq .Name "Telegram" }}
+            <a
+              class="mt-6 inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
+              href="{{ .URL }}"
+            >
+              <i class="fa-brands fa-telegram text-base" aria-hidden="true"></i>
+              Написать в Telegram
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+      <nav aria-label="Нижнее меню" class="min-w-[12rem]">
+        <p class="mb-4 text-center text-xs font-bold uppercase tracking-wider text-slate-400 xl:text-start">Навигация</p>
+        <ul class="flex flex-col items-center gap-3 xl:items-start">
+          {{ range site.Menus.footer }}
+            {{ if ne .Name "Telegram" }}
+              <li>
+                <a
+                  class="group inline-flex items-center gap-2 text-sm font-semibold text-slate-700 transition-colors hover:text-primary"
+                  href="{{ .URL }}"
+                >
+                  <span class="h-px w-4 bg-slate-300 transition-colors group-hover:bg-primary" aria-hidden="true"></span>
+                  {{ .Name }}
+                </a>
+              </li>
+            {{ end }}
+          {{ end }}
+        </ul>
+      </nav>
+    </div>
+    {{ with hugo.Data.shared.footer.copyright }}
+      <div class="mt-16 border-t border-slate-200/90 pt-8 text-center text-sm text-slate-500">
+        {{ . }}
+      </div>
+    {{ end }}
+  </div>
+</footer>

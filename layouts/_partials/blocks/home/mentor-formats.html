@@ -1,0 +1,87 @@
+<section id="{{ .id }}" class="scroll-mt-24 relative border-b border-slate-200/70 bg-white py-20 xl:py-28">
+  {{ partial "components/tech-cloud-section" (dict "set" "formats") }}
+  <div class="container mx-auto max-w-7xl px-4">
+    <p class="section-eyebrow">Сотрудничество</p>
+    <h2 class="section-title mx-auto text-center">{{ .title }}</h2>
+    {{ with .subtitle }}
+      <p class="section-subtitle mx-auto text-center">{{ . }}</p>
+    {{ end }}
+    {{ with .process }}
+      <div class="section-surface mx-auto mt-10 max-w-5xl p-6 sm:p-8">
+        {{ with $.process_title }}
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-primary/80">{{ . }}</p>
+        {{ end }}
+        <p class="mt-3 text-[0.96rem] leading-relaxed text-slate-700 sm:text-base">{{ . }}</p>
+      </div>
+    {{ end }}
+
+    <div class="mt-16 grid gap-6 md:grid-cols-2 md:items-stretch xl:grid-cols-3 xl:gap-8">
+      {{ range $i, $item := .items }}
+        {{ $icon := $item.icon | default "fa-solid fa-layer-group" }}
+        {{ $label := $item.label | default "Формат" }}
+        {{ $featured := $item.featured | default false }}
+        <article
+          class="service-card {{ if $featured }}service-card--featured z-[1]{{ end }}"
+        >
+          <div class="mb-6 flex items-start justify-between gap-3">
+            <span
+              class="service-card-badge"
+            >
+              {{ $label }}
+            </span>
+            <span
+              class="service-card-icon"
+              aria-hidden="true"
+            >
+              <i class="{{ $icon }}"></i>
+            </span>
+          </div>
+          <h3 class="service-card-title">{{ $item.name }}</h3>
+          <p class="service-card-subtitle">{{ $item.audience }}</p>
+          {{ with $item.price }}
+            <p class="service-card-price">
+              {{ . }}
+            </p>
+          {{ end }}
+          {{ with $item.note }}
+            <p class="service-card-price-note">{{ . }}</p>
+          {{ end }}
+          <ul class="service-card-list">
+            {{ range $item.includes }}
+              <li>
+                <span
+                  class="service-card-check"
+                  aria-hidden="true"
+                >
+                  <i class="fa-solid fa-check"></i>
+                </span>
+                <span class="leading-relaxed">{{ . }}</span>
+              </li>
+            {{ end }}
+          </ul>
+          {{ with $item.meta }}
+            <div class="mt-5 border-t border-slate-200/80 pt-4">
+              <ul class="space-y-2 text-[0.8rem] leading-relaxed text-slate-600">
+                {{ range $idx, $line := . }}
+                  <li class="flex items-start gap-2.5">
+                    <span class="mt-0.5 text-primary/80" aria-hidden="true">
+                      <i class="fa-solid {{ if eq $idx 0 }}fa-chart-line{{ else }}fa-clock{{ end }}"></i>
+                    </span>
+                    <span>{{ $line }}</span>
+                  </li>
+                {{ end }}
+              </ul>
+            </div>
+          {{ end }}
+          <div class="service-card-actions">
+            {{ if $featured }}
+              <a class="service-card-btn service-card-btn--primary" href="{{ $item.url }}">{{ $item.cta }}</a>
+            {{ else }}
+              <a class="service-card-btn service-card-btn--outline" href="{{ $item.url }}">{{ $item.cta }}</a>
+            {{ end }}
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+</section>

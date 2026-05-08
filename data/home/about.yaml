@@ -1,0 +1,51 @@
+enable: true
+id: about
+title: Обо мне
+text: >-
+  Привет! 
+  Я Данил — ведущий системный аналитик и ментор.
+  Работал в таким доменах как: финтех, страхование, атомная отрасль и документооборот. Занимаюсь продуктовыми и интеграционными задачами в крупных корпоративных системах.
+  В менторстве делаю упор на прикладной подход: помогаю ученикам не просто выучить термины, а научиться разбирать задачу, видеть границы решения, задавать правильные вопросы и готовить понятные артефакты для команды.
+
+# Добавьте файл в assets/images/ и укажите путь, например: images/mentor.webp
+photo: ""
+photo_alt: Данил — ментор по системному анализу
+
+stack:
+  - icon: fa-solid fa-plug
+    label: REST
+  - icon: fa-solid fa-wave-square
+    label: SOAP
+  - icon: fa-solid fa-diagram-project
+    label: gRPC
+  - icon: fa-solid fa-arrows-left-right
+    label: WebSocket
+  - icon: fa-solid fa-stream
+    label: Kafka
+  - icon: fa-solid fa-database
+    label: SQL
+  - icon: fa-solid fa-code
+    label: DBeaver
+  - icon: fa-solid fa-server
+    label: PostgreSQL
+  - icon: fa-solid fa-memory
+    label: Redis
+  - icon: fa-solid fa-network-wired
+    label: ESB
+  - icon: fa-solid fa-route
+    label: API Gateway
+  - icon: fa-solid fa-table-columns
+    label: Микрофронтенды
+  - icon: fa-solid fa-layer-group
+    label: BFF
+  - icon: fa-solid fa-cubes
+    label: Микросервисы
+  - icon: fa-solid fa-draw-polygon
+    label: PlantUML
+  - icon: fa-solid fa-sitemap
+    label: C4
+  - icon: fa-solid fa-book
+    label: Confluence
+  - icon: fa-solid fa-ticket
+    label: Jira
+

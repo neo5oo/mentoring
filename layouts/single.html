@@ -1,0 +1,18 @@
+{{ define "main" }}
+  {{ $isLegalDoc := or (eq .File.BaseFileName "privacy") (eq .File.BaseFileName "oferta") }}
+  <article class="py-14 xl:py-20">
+    <div class="container mx-auto max-w-4xl px-4">
+      <div class="{{ if $isLegalDoc }}legal-doc-shell{{ else }}section-shell{{ end }}">
+        {{ if $isLegalDoc }}
+          <p class="section-eyebrow text-left xl:text-left">Юридический документ</p>
+        {{ end }}
+        {{ with .Title }}
+          <h1 class="mb-7 text-3xl font-semibold text-slate-900 xl:text-4xl">{{ . }}</h1>
+        {{ end }}
+        <div class="prose prose-slate legal-doc-content max-w-none prose-headings:text-slate-900 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-slate-900">
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+  </article>
+{{ end }}

@@ -1,0 +1,31 @@
+{{ $setName := .set | default "topics" }}
+{{ $sets := hugo.Data.shared.tech_cloud.sets }}
+{{ $items := index $sets $setName }}
+{{ if not $items }}
+  {{ $items = index $sets "topics" }}
+{{ end }}
+
+{{ $slots := slice
+  (dict "x" "left-[2.5%]" "y" "top-[13%]" "motion" "tech-float-slow")
+  (dict "x" "left-[6%]" "y" "top-[30%]" "motion" "tech-float-mid")
+  (dict "x" "left-[4%]" "y" "top-[50%]" "motion" "tech-float-fast")
+  (dict "x" "left-[8%]" "y" "top-[70%]" "motion" "tech-float-mid")
+  (dict "x" "left-[16%]" "y" "top-[18%]" "motion" "tech-float-fast")
+  (dict "x" "left-[14%]" "y" "top-[58%]" "motion" "tech-float-slow")
+  (dict "x" "right-[2.5%]" "y" "top-[13%]" "motion" "tech-float-fast")
+  (dict "x" "right-[5%]" "y" "top-[30%]" "motion" "tech-float-slow")
+  (dict "x" "right-[3.5%]" "y" "top-[50%]" "motion" "tech-float-mid")
+  (dict "x" "right-[7%]" "y" "top-[70%]" "motion" "tech-float-fast")
+  (dict "x" "right-[16%]" "y" "top-[18%]" "motion" "tech-float-mid")
+  (dict "x" "right-[14%]" "y" "top-[58%]" "motion" "tech-float-slow")
+}}
+
+<div class="section-tech-cloud pointer-events-none absolute inset-0 -z-10 hidden lg:block" aria-hidden="true">
+  {{ range $i, $item := first 12 $items }}
+    {{ $slot := index $slots $i }}
+    <span class="section-tech-badge {{ $slot.motion }} {{ $slot.x }} {{ $slot.y }}">
+      <i class="{{ $item.icon | default `fa-solid fa-circle` }}"></i>
+      <span>{{ $item.label }}</span>
+    </span>
+  {{ end }}
+</div>

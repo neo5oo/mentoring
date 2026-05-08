@@ -1,0 +1,182 @@
+sets:
+  program:
+    - icon: fa-solid fa-file-contract
+      label: BRD / SRS
+    - icon: fa-solid fa-list-check
+      label: User Story
+    - icon: fa-solid fa-people-arrows-left-right
+      label: Use Case
+    - icon: fa-solid fa-diagram-successor
+      label: BPMN
+    - icon: fa-solid fa-bezier-curve
+      label: UML
+    - icon: fa-solid fa-cubes
+      label: C4 Model
+    - icon: fa-solid fa-wave-square
+      label: NFR
+    - icon: fa-solid fa-book-open-reader
+      label: Docs
+    - icon: fa-solid fa-clipboard-check
+      label: Acceptance Criteria
+    - icon: fa-solid fa-diagram-project
+      label: Sequence Diagram
+    - icon: fa-solid fa-code-branch
+      label: Integration Flow
+    - icon: fa-solid fa-magnifying-glass-chart
+      label: Gap Analysis
+
+  practice:
+    - icon: fa-solid fa-plug
+      label: REST
+    - icon: fa-solid fa-diagram-project
+      label: gRPC
+    - icon: fa-solid fa-stream
+      label: Kafka
+    - icon: fa-solid fa-database
+      label: SQL
+    - icon: fa-solid fa-paper-plane
+      label: Postman
+    - icon: fa-solid fa-file-waveform
+      label: Swagger
+    - icon: fa-solid fa-shuffle
+      label: Data Mapping
+    - icon: fa-solid fa-network-wired
+      label: RabbitMQ
+    - icon: fa-solid fa-bug
+      label: Debug Cases
+    - icon: fa-solid fa-vial-circle-check
+      label: Test Scenarios
+    - icon: fa-solid fa-table-cells
+      label: Data Checks
+    - icon: fa-solid fa-clipboard-list
+      label: Task Breakdown
+
+  formats:
+    - icon: fa-solid fa-phone
+      label: Созвон
+    - icon: fa-solid fa-map
+      label: Маршрут
+    - icon: fa-solid fa-clipboard-check
+      label: План
+    - icon: fa-solid fa-comments
+      label: Интервью
+    - icon: fa-solid fa-file-lines
+      label: Резюме
+    - icon: fa-solid fa-pen-ruler
+      label: Легенда
+    - icon: fa-solid fa-briefcase
+      label: Выход на рынок
+    - icon: fa-solid fa-handshake
+      label: Оффер
+    - icon: fa-solid fa-roadmap
+      label: План роста
+    - icon: fa-solid fa-flag-checkered
+      label: Целевая роль
+    - icon: fa-solid fa-chart-line
+      label: Прогресс
+    - icon: fa-solid fa-hourglass-half
+      label: Темп обучения
+
+  about:
+    - icon: fa-solid fa-database
+      label: PostgreSQL
+    - icon: fa-solid fa-memory
+      label: Redis
+    - icon: fa-solid fa-stream
+      label: Kafka
+    - icon: fa-solid fa-network-wired
+      label: ESB
+    - icon: fa-solid fa-route
+      label: API Gateway
+    - icon: fa-solid fa-layer-group
+      label: BFF
+    - icon: fa-brands fa-confluence
+      label: Confluence
+    - icon: fa-brands fa-jira
+      label: Jira
+    - icon: fa-solid fa-server
+      label: Microservices
+    - icon: fa-solid fa-shuffle
+      label: Data Mapping
+    - icon: fa-solid fa-bezier-curve
+      label: UML
+    - icon: fa-solid fa-sitemap
+      label: C4
+
+  compare:
+    - icon: fa-solid fa-sitemap
+      label: Архитектура
+    - icon: fa-solid fa-timeline
+      label: Процессы
+    - icon: fa-solid fa-bullseye
+      label: Цели
+    - icon: fa-solid fa-people-group
+      label: Коммуникации
+    - icon: fa-solid fa-circle-check
+      label: Ревью
+    - icon: fa-solid fa-briefcase
+      label: Рабочие кейсы
+    - icon: fa-solid fa-chart-line
+      label: Рост
+    - icon: fa-solid fa-graduation-cap
+      label: Найм
+    - icon: fa-solid fa-arrows-spin
+      label: Итерации
+    - icon: fa-solid fa-scale-balanced
+      label: Trade-offs
+    - icon: fa-solid fa-layer-group
+      label: Системность
+    - icon: fa-solid fa-gauge-high
+      label: Эффективность
+
+  faq:
+    - icon: fa-solid fa-circle-question
+      label: Вопросы
+    - icon: fa-solid fa-shield-halved
+      label: Гарантии
+    - icon: fa-solid fa-clock
+      label: Сроки
+    - icon: fa-solid fa-wallet
+      label: Оплата
+    - icon: fa-solid fa-video
+      label: Формат
+    - icon: fa-solid fa-route
+      label: Маршрут
+    - icon: fa-solid fa-hand
+      label: Поддержка
+    - icon: fa-solid fa-user-check
+      label: Результат
+    - icon: fa-solid fa-circle-info
+      label: Условия
+    - icon: fa-solid fa-file-signature
+      label: Договоренности
+    - icon: fa-solid fa-life-ring
+      label: Помощь
+    - icon: fa-solid fa-shield
+      label: Надежность
+
+  topics:
+    - icon: fa-solid fa-plug
+      label: REST
+    - icon: fa-solid fa-diagram-project
+      label: gRPC
+    - icon: fa-solid fa-stream
+      label: Kafka
+    - icon: fa-solid fa-database
+      label: SQL
+    - icon: fa-solid fa-book
+      label: Confluence
+    - icon: fa-solid fa-ticket
+      label: Jira
+    - icon: fa-solid fa-draw-polygon
+      label: PlantUML
+    - icon: fa-solid fa-paper-plane
+      label: Postman
+    - icon: fa-solid fa-wave-square
+      label: NFR
+    - icon: fa-solid fa-list-check
+      label: User Story
+    - icon: fa-solid fa-people-arrows-left-right
+      label: Use Case
+    - icon: fa-solid fa-diagram-successor
+      label: BPMN

@@ -1,0 +1,41 @@
+enable: true
+id: topics
+title: Что будем разбирать
+subtitle: Темы, артефакты и инструменты, с которыми мы будем работать в ходе обучения
+items:
+  - icon: fa-solid fa-plug
+    label: REST
+  - icon: fa-solid fa-diagram-project
+    label: gRPC
+  - icon: fa-solid fa-stream
+    label: Kafka
+  - icon: fa-solid fa-database
+    label: Базы данных и SQL
+  - icon: fa-solid fa-book
+    label: Confluence
+  - icon: fa-solid fa-code
+    label: DBeaver
+  - icon: fa-solid fa-flask
+    label: Plumber
+  - icon: fa-solid fa-table-cells-large
+    label: dbdiagram.io
+  - icon: fa-solid fa-file-waveform
+    label: Swagger
+  - icon: fa-solid fa-share-nodes
+    label: PlantUML
+  - icon: fa-solid fa-sitemap
+    label: StormBPMN
+  - icon: fa-solid fa-paper-plane
+    label: Postman
+  - icon: fa-solid fa-list-check
+    label: User Story
+  - icon: fa-solid fa-clipboard-list
+    label: BR/FR/NFR
+  - icon: fa-solid fa-people-arrows
+    label: Use Case
+  - icon: fa-solid fa-arrows-turn-to-dots
+    label: Sequence Diagram
+  - icon: fa-solid fa-ticket
+    label: Jira
+  - icon: fa-solid fa-ellipsis
+    label: И многое другое

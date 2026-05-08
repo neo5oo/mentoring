@@ -1,0 +1,69 @@
+<nav
+  data-site-header
+  class="site-header sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 transition-[background-color,box-shadow,border-color] duration-300"
+>
+  <div class="container mx-auto flex max-w-7xl items-center justify-between px-4 py-3.5">
+    <a class="flex items-center gap-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="{{ .Site.BaseURL }}">
+      {{ with site.Params.logo }}
+        {{ partial "utilities/image.html" (dict "src" . "class" "h-8 w-auto" "alt" "") }}
+      {{ end }}
+      <span class="whitespace-nowrap text-base font-bold tracking-tight text-slate-900 sm:text-lg xl:text-[1.05rem]">{{ .Site.Title }}</span>
+    </a>
+    <button
+      class="cursor-pointer rounded-lg p-2 text-slate-800 transition-colors hover:bg-slate-100 hover:text-primary xl:hidden"
+      type="button"
+      data-toggle-target="#navbarContent"
+      data-toggle-class="-translate-y-full"
+      aria-label="Открыть меню"
+      aria-expanded="false"
+      aria-controls="navbarContent"
+    >
+      {{ partial "heroicons/bars-4" }}
+    </button>
+    <div
+      class="fixed inset-0 z-[60] flex -translate-y-full flex-col items-center justify-center gap-8 bg-white pt-[4.5rem] duration-300 ease-out motion-reduce:transition-none xl:relative xl:inset-auto xl:z-auto xl:flex-1 xl:translate-y-0 xl:flex-row xl:items-center xl:justify-end xl:gap-6 xl:bg-transparent xl:pt-0"
+      id="navbarContent"
+      aria-label="Меню сайта"
+    >
+      <div
+        class="absolute top-0 mx-auto flex w-full items-center justify-between border-b border-slate-100 bg-white px-4 py-4 xl:hidden"
+      >
+        <a class="flex items-center gap-2 xl:hidden" href="{{ .Site.BaseURL }}">
+          {{ with site.Params.logo }}
+            {{ partial "utilities/image.html" (dict "src" . "class" "h-8 w-auto" "alt" "") }}
+          {{ end }}
+          <span class="text-lg font-bold text-slate-900">{{ .Site.Title }}</span>
+        </a>
+        <button
+          class="cursor-pointer rounded-lg p-2 text-slate-800 xl:hidden"
+          type="button"
+          data-toggle-target="#navbarContent"
+          data-toggle-class="-translate-y-full"
+          aria-label="Закрыть меню"
+          aria-expanded="false"
+          aria-controls="navbarContent"
+        >
+          {{ partial "heroicons/x-mark" }}
+        </button>
+      </div>
+      <ul class="flex flex-col gap-6 xl:flex-row xl:items-center xl:gap-1">
+        {{ range site.Menus.main }}
+          <li class="text-center">
+            <a
+              class="inline-flex whitespace-nowrap rounded-lg px-3 py-2 text-[0.92rem] font-semibold text-slate-700 transition-all duration-200 hover:bg-slate-100 hover:text-primary"
+              href="{{ .URL }}"
+              >{{ .Name }}</a
+            >
+          </li>
+        {{ end }}
+      </ul>
+      <ul class="flex flex-col gap-4 xl:ml-2 xl:flex-row xl:items-center">
+        {{ range .Site.Menus.buttons }}
+          <li class="text-center">
+            {{ partial "components/button/primary" (dict "label" .Name "href" .URL) }}
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</nav>
