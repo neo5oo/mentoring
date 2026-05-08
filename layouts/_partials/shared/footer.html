@@ -1,4 +1,4 @@
-{{ with hugo.Data.shared.subscribe }}{{ if .enable }}{{ partial "blocks/shared/subscribe" . }}{{ end }}{{ end }}
+{{ with site.Data.shared.subscribe }}{{ if .enable }}{{ partial "blocks/shared/subscribe" . }}{{ end }}{{ end }}
 
 <footer class="relative border-t border-slate-200/80 bg-gradient-to-b from-slate-50/60 to-white pb-12 pt-16">
   <div
@@ -41,7 +41,7 @@
         </ul>
       </nav>
     </div>
-    {{ with hugo.Data.shared.footer.copyright }}
+    {{ with site.Data.shared.footer.copyright }}
       <div class="mt-16 border-t border-slate-200/90 pt-8 text-center text-sm text-slate-500">
         {{ . }}
       </div>

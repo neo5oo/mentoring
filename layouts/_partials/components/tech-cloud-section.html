@@ -1,5 +1,5 @@
 {{ $setName := .set | default "topics" }}
-{{ $sets := hugo.Data.shared.tech_cloud.sets }}
+{{ $sets := site.Data.shared.tech_cloud.sets }}
 {{ $items := index $sets $setName }}
 {{ if not $items }}
   {{ $items = index $sets "topics" }}
