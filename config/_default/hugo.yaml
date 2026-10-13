@@ -1,7 +1,7 @@
-baseURL: https://mentor-analyst.space/
+baseURL: /
 languageCode: ru-ru
 defaultContentLanguage: ru
-title: Ментор по системному анализу
+title: Разборы для системных аналитиков
 enableRobotsTXT: true
 disableKinds:
   - taxonomy
@@ -9,12 +9,12 @@ disableKinds:
 
 params:
   description: >-
-    Менторство по системному анализу через структурированную базу знаний, разборы
-    и практические задания по типовым рабочим ситуациям аналитика.
+    Разовые консультации с действующим senior системным аналитиком: профессиональный
+    рост, план входа в системный анализ и МОК-собеседования.
   logo: images/logo-sa.svg
   colors:
-    primary: "#4338ca"
-    accent: "#0d9488"
+    primary: "#335cff"
+    accent: "#b6f23d"
 
 markup:
   goldmark:
@@ -23,35 +23,26 @@ markup:
 
 menus:
   main:
-    - name: Кому подойдет
+    - name: Ситуации
       url: /#audience
       weight: 10
-    - name: Программа
-      url: /#program
-      weight: 20
-    - name: Практика
-      url: /#practice
-      weight: 30
-    - name: Формат и стоимость
+    - name: Форматы
       url: /#formats
-      weight: 40
-    - name: Обо мне
+      weight: 20
+    - name: Как проходит
+      url: /#process
+      weight: 30
+    - name: О подходе
       url: /#about
-      weight: 45
+      weight: 40
     - name: FAQ
       url: /#faq
       weight: 50
   buttons:
     - name: Связаться
-      url: https://t.me/neo_61
+      url: https://t.me/dimalkov61
       weight: 10
   footer:
     - name: Telegram
-      url: https://t.me/neo_61
+      url: https://t.me/dimalkov61
       weight: 10
-    - name: Политика конфиденциальности
-      url: /privacy/
-      weight: 20
-    - name: Договор оферты
-      url: /oferta/
-      weight: 30

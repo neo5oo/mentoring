@@ -1,0 +1,32 @@
+<section id="{{ .id }}" class="scroll-mt-24 bg-white py-20 lg:py-28">
+  <div class="container mx-auto max-w-6xl px-4">
+    <div class="grid gap-8 border-b border-black pb-10 lg:grid-cols-[8rem_1fr]">
+      <p class="section-index">02 / форматы</p>
+      <div class="grid gap-5 lg:grid-cols-[1fr_0.75fr] lg:items-end">
+        <h2 class="section-title">{{ .title }}</h2>
+        {{ with .subtitle }}<p class="text-base leading-relaxed text-black/60">{{ . }}</p>{{ end }}
+      </div>
+    </div>
+
+    <div>
+      {{ range $i, $item := .items }}
+        <article class="service-row group relative grid gap-7 border-b border-black/15 py-10 lg:grid-cols-[5rem_0.8fr_1.2fr_13rem] lg:gap-8 lg:py-12">
+          {{ if $item.featured }}<div class="absolute inset-y-0 -left-4 w-1 bg-primary" aria-hidden="true"></div>{{ end }}
+          <p class="font-mono text-sm text-black/35">0{{ add $i 1 }}</p>
+          <div>
+            <p class="mb-4 font-mono text-[0.68rem] font-bold uppercase tracking-[0.14em] text-primary">{{ $item.label }}</p>
+            <h3 class="text-2xl font-bold leading-tight text-[#151515]">{{ $item.name }}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-black/55">{{ $item.audience }}</p>
+          </div>
+          <ul class="grid content-start gap-3 text-sm leading-relaxed text-black/65 sm:grid-cols-2 lg:grid-cols-1">
+            {{ range $item.includes }}<li class="flex gap-3"><span class="mt-[0.55rem] block h-px w-4 shrink-0 bg-black/35" aria-hidden="true"></span><span>{{ . }}</span></li>{{ end }}
+          </ul>
+          <div class="flex flex-col items-start lg:items-end">
+            <p class="font-mono text-sm font-bold text-[#151515]">{{ $item.price }}</p>
+            <a class="mt-6 inline-flex items-center gap-2 border-b-2 border-primary pb-1 text-sm font-bold text-[#151515] transition-colors hover:text-primary" href="{{ $item.url }}">{{ $item.cta }}<span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+<section id="{{ .id }}" class="scroll-mt-24 border-t border-black/15 bg-[#f4f4f0] py-20 lg:py-28">
+  <div class="container mx-auto max-w-6xl px-4">
+    <div class="grid gap-8 border-b border-black pb-10 lg:grid-cols-[8rem_1fr]">
+      <p class="section-index">01 / ситуации</p>
+      <div class="max-w-3xl">
+        <h2 class="section-title">{{ .title }}</h2>
+        {{ with .subtitle }}<p class="section-subtitle">{{ . }}</p>{{ end }}
+      </div>
+    </div>
+    <div>
+      {{ range $i, $item := .items }}
+        <article class="group grid gap-5 border-b border-black/15 py-8 transition-colors hover:bg-white/60 sm:px-3 lg:grid-cols-[6rem_0.85fr_1.15fr] lg:items-start lg:gap-8 lg:py-10">
+          <p class="font-mono text-sm text-black/40">0{{ add $i 1 }}</p>
+          <div>
+            <p class="mb-3 font-mono text-[0.68rem] font-bold uppercase tracking-[0.16em] text-primary">{{ $item.label }}</p>
+            <h3 class="text-2xl font-bold leading-tight text-[#151515]">{{ $item.title }}</h3>
+          </div>
+          <p class="max-w-xl text-base leading-relaxed text-black/60 lg:text-lg">{{ $item.text }}</p>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+</section>

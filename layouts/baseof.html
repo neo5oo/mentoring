@@ -73,7 +73,7 @@
 
 
     <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#0f172a" />
 
     <!-- RSS -->
     {{ range .AlternativeOutputFormats -}}
@@ -128,7 +128,7 @@
       <script src="{{ $main.RelPermalink }}" defer></script>
     {{ end }}
   </head>
-  <body class="overflow-x-hidden bg-white text-slate-900 antialiased">
+  <body class="overflow-x-hidden bg-[#f6f3ed] text-slate-900 antialiased">
     <div class="flex min-h-screen flex-col">
       {{ partial "shared/header" . }}
       <div class="grow">{{ block "main" . }}{{ end }}</div>

@@ -1,0 +1,22 @@
+<section id="{{ .id }}" class="scroll-mt-24 bg-[#171717] py-20 text-white lg:py-28">
+  <div class="container mx-auto max-w-6xl px-4">
+    <div class="grid gap-8 border-b border-white/25 pb-10 lg:grid-cols-[8rem_1fr]">
+      <p class="section-index !text-white/45">03 / процесс</p>
+      <div class="max-w-3xl">
+        <h2 class="section-title !text-white">{{ .title }}</h2>
+        {{ with .subtitle }}<p class="mt-5 max-w-2xl text-lg leading-relaxed text-white/55">{{ . }}</p>{{ end }}
+      </div>
+    </div>
+    <ol class="grid md:grid-cols-2 lg:grid-cols-4">
+      {{ range $i, $track := .tracks }}
+        <li class="border-b border-white/15 py-8 md:border-r md:px-6 lg:min-h-[20rem] lg:border-b-0 lg:py-10 first:pl-0 last:border-r-0">
+          <p class="font-mono text-sm text-accent">0{{ add $i 1 }}</p>
+          <h3 class="mt-12 text-xl font-bold leading-snug text-white">{{ $track.title }}</h3>
+          <ul class="mt-5 space-y-3 text-sm leading-relaxed text-white/50">
+            {{ range $track.items }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        </li>
+      {{ end }}
+    </ol>
+  </div>
+</section>

@@ -1,7 +1,7 @@
-enable: true
+enable: false
 id: topics
 title: Что будем разбирать
-subtitle: Темы, артефакты и инструменты, с которыми мы будем работать в ходе обучения
+subtitle: Темы, артефакты и инструменты, которые могут быть частью конкретного разбора
 items:
   - icon: fa-solid fa-plug
     label: REST

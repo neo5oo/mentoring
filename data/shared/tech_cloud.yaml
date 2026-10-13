@@ -61,13 +61,13 @@ sets:
     - icon: fa-solid fa-comments
       label: Интервью
     - icon: fa-solid fa-file-lines
-      label: Резюме
+      label: Контекст
     - icon: fa-solid fa-pen-ruler
       label: Легенда
     - icon: fa-solid fa-briefcase
       label: Выход на рынок
     - icon: fa-solid fa-handshake
-      label: Оффер
+      label: Решение
     - icon: fa-solid fa-roadmap
       label: План роста
     - icon: fa-solid fa-flag-checkered
@@ -114,12 +114,12 @@ sets:
       label: Коммуникации
     - icon: fa-solid fa-circle-check
       label: Ревью
-    - icon: fa-solid fa-briefcase
-      label: Рабочие кейсы
+    - icon: fa-solid fa-comments
+      label: МОК-интервью
     - icon: fa-solid fa-chart-line
       label: Рост
     - icon: fa-solid fa-graduation-cap
-      label: Найм
+      label: Рост
     - icon: fa-solid fa-arrows-spin
       label: Итерации
     - icon: fa-solid fa-scale-balanced
